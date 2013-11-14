@@ -1,0 +1,31 @@
+!!!
+html
+  head
+    meta(charset='utf8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    meta(name="viewport", content="width=device-width")
+    meta(name='description', content='description of your site')
+    meta(name='author', content= "author of the site")
+    link(rel='shortcut icon', href="favicon.png", type="image/x-icon")
+    link(rel='stylesheet', href='css/master.css')
+    link(href='http://fonts.googleapis.com/css?family=Didact+Gothic', rel='stylesheet', type='text/css')
+    link(href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz', rel='stylesheet', type='text/css')
+    link(href='components/fancybox/jquery.fancybox.css', rel='stylesheet', type='text/css')
+    title= title
+
+  body
+    header
+    nav
+        a#logo
+        .buttonset
+
+    != content
+
+    //- footer  
+      p © Chaz Southard 2013
+    //- add other scripts through require.js, not here
+    script(data-main="js/main", src="js/require.js")
+
+    //- this must be included for live reload to work in developement
+    //- it will be automatically ignored when deployed
+    != livereload
